@@ -21,7 +21,7 @@ const weatherForm = document.querySelector('form').addEventListener('submit', (e
     messageTwo.textContent = '';
 
     const query = document.querySelector('input').value;
-    fetch('http://localhost:3000/weather?address=' + query).then((response) => {
+    fetch('/weather?address=' + query).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 console.log(data.error);
